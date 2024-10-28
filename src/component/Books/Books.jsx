@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getBooks } from "../../services/service";
+import Product from "../Product/Product";
 
 const Books = () => {
     const [items, setItems] = useState([]);
@@ -20,8 +21,8 @@ const Books = () => {
         <div>
             <h2>Books</h2>
             <div >
-                {items.map(item => 
-                    <h1 key={item.id}> {item.bookName}</h1>
+                {items.map(item =>
+                    <Product key={item.id} product={item} />
                 )}
             </div>
         </div>
