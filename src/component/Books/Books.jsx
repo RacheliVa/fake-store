@@ -19,13 +19,9 @@ const Books = () => {
     return (
         <div>
             <h2>Books</h2>
-            <div>
-                {items.length > 0 ? (
-                    items.map(item => 
-                        <h1 key={item.id}>{item.name}</h1>  // הצגת שם הספר
-                    )
-                ) : (
-                    <p>No books available</p>
+            <div >
+                {items.map(item => 
+                    <h1 key={item.id}> {item.bookName}</h1>
                 )}
             </div>
         </div>
